@@ -140,15 +140,43 @@ export const DUMMY_WEATHER_DATA: Record<string, WeatherData> = {
       },
     ],
   },
+  
+  london: {
+    city: "London",
+    latitude: 51.5074,
+    longitude: -0.1278,
+    current: {
+      temperature: 53,
+      feelsLike: 47,
+      humidity: 88,
+      windSpeed: 11,
+      condition: {
+        code: 2,
+        description: "Partly cloudy",
+      },
+    },
+    forecast: [
+      {
+        date: new Date(Date.now() + 86400000).toISOString().split("T")[0],
+        maxTemp: 55,
+        minTemp: 48,
+        condition: {
+          code: 2,
+          description: "Partly cloudy",
+        },
+      },
+    ],
+  },
+
   paris: {
     city: "Paris",
     latitude: 48.8566,
     longitude: 2.3522,
     current: {
-      temperature: 64,
-      feelsLike: 61,
-      humidity: 65,
-      windSpeed: 7,
+      temperature: 51,
+      feelsLike: 46,
+      humidity: 89,
+      windSpeed: 8,
       condition: {
         code: 2,
         description: "Partly cloudy",
@@ -171,13 +199,13 @@ export const DUMMY_WEATHER_DATA: Record<string, WeatherData> = {
     latitude: 37.3541,
     longitude: -121.9552,
     current: {
-      temperature: 64,
-      feelsLike: 61,
-      humidity: 65,
-      windSpeed: 7,
+      temperature: 67,
+      feelsLike: 68,
+      humidity: 58,
+      windSpeed: 9,
       condition: {
-        code: 2,
-        description: "Partly cloudy",
+        code: 0,
+        description: "Clear sky",
       },
     },
     forecast: [

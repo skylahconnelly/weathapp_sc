@@ -4,6 +4,7 @@ import { CITIES } from "@/data/cities";
 import { CurrentWeatherDetail } from "@/components/CurrentWeatherDetail";
 import { ForecastCard } from "@/components/ForecastCard";
 import { Button } from "@/components/ui/Button";
+import { NewButton } from "@/components/ui/NewButton";
 
 /**
  * Detailed Weather Page
@@ -77,6 +78,9 @@ export default async function WeatherDetailPage({ params }: PageProps) {
           <Button href="/" variant="default">
             Search Another City
           </Button>
+          <NewButton variant="default">
+            View All Cities
+          </NewButton>
         </div>
       </main>
     </div>
@@ -93,3 +97,4 @@ export async function generateMetadata({ params }: PageProps) {
     description: `Detailed weather forecast for ${cityName}`,
   };
 }
+

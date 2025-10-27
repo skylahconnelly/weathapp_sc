@@ -1,16 +1,15 @@
 import Link from "next/link";
 
 /**
- * Button Component
+ * NewButton Component
  *
- * A reusable button with two variants:
- * - default: Blue background with white text
- * - ghost: Text only with hover underline
+ * A reusable button that routes to the all cities weather page
+ * Similar to Button component but specifically for navigating to /all-weather/allcities
  *
  * Can be used as a button or a link (if href is provided)
  */
 
-interface ButtonProps {
+interface NewButtonProps {
   variant?: "default" | "ghost";
   href?: string;
   children: React.ReactNode;
@@ -20,13 +19,13 @@ interface ButtonProps {
   type?: "button" | "submit";
 }
 
-export function Button({
+export function NewButton({
   variant = "default",
-  href,
+  href = "/all-weather/allcities",
   children,
   className = "",
   ...props
-}: ButtonProps) {
+}: NewButtonProps) {
   // Base styles that apply to all buttons
   const baseStyles =
     "inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-colors";

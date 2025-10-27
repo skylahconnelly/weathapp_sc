@@ -20,6 +20,19 @@ export const CITIES: City[] = [
     latitude: 35.6762,
     longitude: 139.6503,
   },
+  {
+    name: "London",
+    latitude: 51.5074,
+    longitude: -0.1278,
+  },
+  {name: "Paris", 
+    latitude: 48.8566, 
+    longitude: 2.3522
+  
+  },
+  {name: "Santa Clara", 
+    latitude: 37.3541, 
+    longitude: -121.9552},  
 ];
 
 export function getCityByName(name: string): City | undefined {
