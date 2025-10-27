@@ -140,6 +140,58 @@ export const DUMMY_WEATHER_DATA: Record<string, WeatherData> = {
       },
     ],
   },
+  paris: {
+    city: "Paris",
+    latitude: 48.8566,
+    longitude: 2.3522,
+    current: {
+      temperature: 64,
+      feelsLike: 61,
+      humidity: 65,
+      windSpeed: 7,
+      condition: {
+        code: 2,
+        description: "Partly cloudy",
+      },
+    },
+    forecast: [
+      {
+        date: new Date(Date.now() + 86400000).toISOString().split("T")[0],
+        maxTemp: 72,
+        minTemp: 61,
+        condition: {
+          code: 2,
+          description: "Partly cloudy",
+        },
+      },
+    ],
+  },
+  "santa clara": {
+    city: "Santa Clara",
+    latitude: 37.3541,
+    longitude: -121.9552,
+    current: {
+      temperature: 64,
+      feelsLike: 61,
+      humidity: 65,
+      windSpeed: 7,
+      condition: {
+        code: 2,
+        description: "Partly cloudy",
+      },
+    },
+    forecast: [
+      {
+        date: new Date(Date.now() + 86400000).toISOString().split("T")[0],
+        maxTemp: 72,
+        minTemp: 61,
+        condition: {
+          code: 2,
+          description: "Partly cloudy",
+        },
+      },
+    ],
+  },
 };
 
 export function getDummyWeatherData(cityName: string): WeatherData | null {
