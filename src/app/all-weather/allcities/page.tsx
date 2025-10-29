@@ -19,7 +19,7 @@ export default function AllCities() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-zinc-900 dark:text-white mb-4">
-            All Cities Weather
+            Weather Summary
           </h1>
           <p className="text-xl text-zinc-600 dark:text-zinc-400">
             Check the weather for all available cities
@@ -36,7 +36,7 @@ export default function AllCities() {
                 href={`/weather/${city.name.toLowerCase()}`}
                 className="block transition-transform hover:scale-105"
               >
-                <WeatherCard city={city.name} weather={weatherData.current} />
+                <WeatherCard city={city.name} weather={weatherData.current} animate={false} />
               </Link>
             );
           })}

@@ -24,7 +24,7 @@ export function LocationSearch({ onCitySelect }: LocationSearchProps) {
       <select
         onChange={handleChange}
         defaultValue=""
-        className="w-full ps-2 pe-4 py-2 border border-zinc-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-zinc-800 dark:border-zinc-700 dark:text-white"
+        className="w-full ps-2 pe-4 py-2 bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-white"
       >
         <option value="">Select a city...</option>
         {CITIES.map((city) => (

@@ -158,8 +158,26 @@ export const DUMMY_WEATHER_DATA: Record<string, WeatherData> = {
     forecast: [
       {
         date: new Date(Date.now() + 86400000).toISOString().split("T")[0],
-        maxTemp: 55,
+        maxTemp: 56,
         minTemp: 48,
+        condition: {
+          code: 3,
+          description: "Overcast",
+        },
+      },
+      {
+        date: new Date(Date.now() + 172800000).toISOString().split("T")[0],
+        maxTemp: 58,
+        minTemp: 49,
+        condition: {
+          code: 61,
+          description: "Slight rain",
+        },
+      },
+      {
+        date: new Date(Date.now() + 259200000).toISOString().split("T")[0],
+        maxTemp: 54,
+        minTemp: 46,
         condition: {
           code: 2,
           description: "Partly cloudy",
@@ -185,11 +203,29 @@ export const DUMMY_WEATHER_DATA: Record<string, WeatherData> = {
     forecast: [
       {
         date: new Date(Date.now() + 86400000).toISOString().split("T")[0],
-        maxTemp: 72,
-        minTemp: 61,
+        maxTemp: 55,
+        minTemp: 45,
+        condition: {
+          code: 1,
+          description: "Mainly clear",
+        },
+      },
+      {
+        date: new Date(Date.now() + 172800000).toISOString().split("T")[0],
+        maxTemp: 58,
+        minTemp: 47,
         condition: {
           code: 2,
           description: "Partly cloudy",
+        },
+      },
+      {
+        date: new Date(Date.now() + 259200000).toISOString().split("T")[0],
+        maxTemp: 54,
+        minTemp: 46,
+        condition: {
+          code: 61,
+          description: "Slight rain",
         },
       },
     ],
@@ -211,8 +247,26 @@ export const DUMMY_WEATHER_DATA: Record<string, WeatherData> = {
     forecast: [
       {
         date: new Date(Date.now() + 86400000).toISOString().split("T")[0],
-        maxTemp: 72,
-        minTemp: 61,
+        maxTemp: 74,
+        minTemp: 63,
+        condition: {
+          code: 0,
+          description: "Clear sky",
+        },
+      },
+      {
+        date: new Date(Date.now() + 172800000).toISOString().split("T")[0],
+        maxTemp: 76,
+        minTemp: 65,
+        condition: {
+          code: 1,
+          description: "Mainly clear",
+        },
+      },
+      {
+        date: new Date(Date.now() + 259200000).toISOString().split("T")[0],
+        maxTemp: 73,
+        minTemp: 62,
         condition: {
           code: 2,
           description: "Partly cloudy",

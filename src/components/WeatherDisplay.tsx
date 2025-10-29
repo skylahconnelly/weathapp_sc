@@ -15,10 +15,18 @@ export function WeatherDisplay({ weather }: WeatherDisplayProps) {
     <div className="flex flex-col items-center space-y-6">
       <WeatherCard city={weather.city} weather={weather.current} />
 
-      {/* Link to detailed weather */}
-      <Button href={`/weather/${weather.city.toLowerCase()}`} variant="default">
-        View Detailed Forecast
-      </Button>
+      {/* Action buttons */}
+      <div className="flex flex-col sm:flex-row gap-4">
+        {/* Primary button - detailed forecast */}
+        <Button href={`/weather/${weather.city.toLowerCase()}`} variant="outline">
+          View Detailed Forecast
+        </Button>
+        
+        {/* Secondary button - all cities */}
+        <Button href="/all-weather/allcities" variant="default">
+          View All Cities
+        </Button>
+      </div>
     </div>
   );
 }

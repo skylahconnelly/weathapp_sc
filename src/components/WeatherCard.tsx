@@ -8,9 +8,10 @@ import { CurrentWeather } from "@/types/weather";
 interface WeatherCardProps {
   city: string;
   weather: CurrentWeather;
+  animate?: boolean;
 }
 
-export function WeatherCard({ city, weather }: WeatherCardProps) {
+export function WeatherCard({ city, weather, animate = true }: WeatherCardProps) {
   return (
     <div className="bg-white dark:bg-zinc-900 rounded-2xl shadow-lg p-8 w-full max-w-md border border-zinc-200 dark:border-zinc-800">
       <div className="text-center space-y-6">
@@ -21,7 +22,7 @@ export function WeatherCard({ city, weather }: WeatherCardProps) {
 
         {/* Weather icon */}
         <div className="flex justify-center">
-          <WeatherIcon code={weather.condition.code} size="xl" />
+          <WeatherIcon code={weather.condition.code} size="xl" animate={animate} />
         </div>
 
         {/* Temperature */}
@@ -35,8 +36,8 @@ export function WeatherCard({ city, weather }: WeatherCardProps) {
         </div>
 
         {/* Additional details */}
-        <div className="grid grid-cols-3 gap-4 pt-6 border-t border-zinc-200 dark:border-zinc-800">
-          <div className="text-center">
+        <div className="flex justify-between items-center pt-6 border-t border-zinc-200 dark:border-zinc-800">
+          <div className="text-center flex-1">
             <p className="text-sm text-zinc-500 dark:text-zinc-500">
               Feels like
             </p>
@@ -44,13 +45,21 @@ export function WeatherCard({ city, weather }: WeatherCardProps) {
               {weather.feelsLike}°F
             </p>
           </div>
-          <div className="text-center">
+          
+          {/* Vertical divider */}
+          <div className="w-px h-12 bg-zinc-200 dark:bg-zinc-700 mx-4"></div>
+          
+          <div className="text-center flex-1">
             <p className="text-sm text-zinc-500 dark:text-zinc-500">Humidity</p>
             <p className="text-lg font-semibold text-zinc-900 dark:text-white">
               {weather.humidity}%
             </p>
           </div>
-          <div className="text-center">
+          
+          {/* Vertical divider */}
+          <div className="w-px h-12 bg-zinc-200 dark:bg-zinc-700 mx-4"></div>
+          
+          <div className="text-center flex-1">
             <p className="text-sm text-zinc-500 dark:text-zinc-500">Wind</p>
             <p className="text-lg font-semibold text-zinc-900 dark:text-white">
               {weather.windSpeed} mph

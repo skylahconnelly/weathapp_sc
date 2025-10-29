@@ -38,12 +38,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 dark:bg-zinc-950 px-4 py-12">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-zinc-900 dark:to-zinc-800 px-4 py-12">
       <main className="w-full max-w-2xl space-y-8">
         {/* Header */}
         <PageHeader
           title="Weather App"
-          subtitle="Simple weather forecast for your city"
+          subtitle="A simple weather forecast for your city."
         />
 
         {/* Search at the top */}

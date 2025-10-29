@@ -11,7 +11,7 @@ import Link from "next/link";
  */
 
 interface ButtonProps {
-  variant?: "default" | "ghost";
+  variant?: "default" | "ghost" | "outline";
   href?: string;
   children: React.ReactNode;
   onClick?: () => void;
@@ -37,6 +37,8 @@ export function Button({
     ghost:
       "text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/20",
     dark: "bg-zinc-900 text-white hover:bg-zinc-800",
+    outline:
+      "bg-white dark:bg-zinc-900 text-blue-600 dark:text-blue-400 border-2 border-blue-600 dark:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20",
   };
 
   // Combine all styles
