@@ -16,7 +16,7 @@ export function ForecastCard({ forecast }: ForecastCardProps) {
         {forecast.map((day, index) => (
           <div
             key={day.date}
-            className="bg-zinc-50 dark:bg-zinc-800 rounded-xl p-6 text-center"
+            className="bg-zinc-50 dark:bg-zinc-800 rounded-xl p-6 text-center shadow-md border-t border-l border-white/50 dark:border-zinc-700/50 border-b border-r border-zinc-200/50 dark:border-zinc-900/50"
           >
             <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-3">
               {index === 0

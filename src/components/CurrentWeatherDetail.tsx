@@ -34,7 +34,7 @@ export function CurrentWeatherDetail({
 
         {/* Right side - Details grid */}
         <div className="grid grid-cols-2 gap-4">
-          <div className="bg-zinc-50 dark:bg-zinc-800 rounded-xl p-4">
+          <div className="bg-zinc-50 dark:bg-zinc-800 rounded-xl p-4 shadow-md border-t border-l border-white/50 dark:border-zinc-700/50 border-b border-r border-zinc-200/50 dark:border-zinc-900/50">
             <p className="text-sm text-zinc-500 dark:text-zinc-500">
               Feels like
             </p>
@@ -42,13 +42,13 @@ export function CurrentWeatherDetail({
               {current.feelsLike}°F
             </p>
           </div>
-          <div className="bg-zinc-50 dark:bg-zinc-800 rounded-xl p-4">
+          <div className="bg-zinc-50 dark:bg-zinc-800 rounded-xl p-4 shadow-md border-t border-l border-white/50 dark:border-zinc-700/50 border-b border-r border-zinc-200/50 dark:border-zinc-900/50">
             <p className="text-sm text-zinc-500 dark:text-zinc-500">Humidity</p>
             <p className="text-2xl font-bold text-zinc-900 dark:text-white mt-1">
               {current.humidity}%
             </p>
           </div>
-          <div className="bg-zinc-50 dark:bg-zinc-800 rounded-xl p-4">
+          <div className="bg-zinc-50 dark:bg-zinc-800 rounded-xl p-4 shadow-md border-t border-l border-white/50 dark:border-zinc-700/50 border-b border-r border-zinc-200/50 dark:border-zinc-900/50">
             <p className="text-sm text-zinc-500 dark:text-zinc-500">
               Wind Speed
             </p>
@@ -56,7 +56,7 @@ export function CurrentWeatherDetail({
               {current.windSpeed} mph
             </p>
           </div>
-          <div className="bg-zinc-50 dark:bg-zinc-800 rounded-xl p-4">
+          <div className="bg-zinc-50 dark:bg-zinc-800 rounded-xl p-4 shadow-md border-t border-l border-white/50 dark:border-zinc-700/50 border-b border-r border-zinc-200/50 dark:border-zinc-900/50">
             <p className="text-sm text-zinc-500 dark:text-zinc-500">Location</p>
             <p className="text-xs font-semibold text-zinc-900 dark:text-white mt-1">
               {latitude.toFixed(2)}°N, {longitude.toFixed(2)}°E

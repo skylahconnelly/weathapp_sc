@@ -17,19 +17,23 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const loadCityWeather = (cityName: string) => {
+  const loadCityWeather = async (cityName: string) => {
     setLoading(true);
     setError("");
 
-    const data = getWeatherData(cityName);
+    try {
+      const data = await getWeatherData(cityName);
 
-    if (data) {
-      setWeather(data);
-    } else {
-      setError(`Failed to load weather data for ${cityName}`);
+      if (data) {
+        setWeather(data);
+      } else {
+        setError(`Sorry, something went wrong.Failed to load weather data for ${cityName}.`);
+      }
+    } catch (err) {
+      setError(`Sorry, something went wrong. Failed to load weather data for ${cityName}.`);
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
   useEffect(() => {

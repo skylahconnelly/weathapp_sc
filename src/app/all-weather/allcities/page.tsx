@@ -3,15 +3,19 @@ import { CITIES } from "@/data/cities";
 import { WeatherCard } from "@/components/WeatherCard";
 import Link from "next/link";
 
-export default function AllCities() {
+export default async function AllCities() {
   // Get weather data for all cities
-  const citiesWithWeather = CITIES.map((city) => {
-    const weatherData = getWeatherData(city.name);
+  const weatherPromises = CITIES.map(async (city) => {
+    const weatherData = await getWeatherData(city.name);
     return {
       city,
       weatherData,
     };
-  }).filter((item) => item.weatherData !== null);
+  });
+  
+  const citiesWithWeather = (await Promise.all(weatherPromises)).filter(
+    (item) => item.weatherData !== null
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-zinc-900 dark:to-zinc-800 p-8">

@@ -1,4 +1,6 @@
 import { WeatherData } from "@/types/weather";
+import { fetchWeatherApi } from 'openmeteo'; // Import API line
+
 
 /**
  * Dummy weather data for development and teaching
@@ -7,6 +9,7 @@ import { WeatherData } from "@/types/weather";
  * and our weather service layer
  * All temperatures in Fahrenheit, wind speed in mph
  */
+
 export const DUMMY_WEATHER_DATA: Record<string, WeatherData> = {
   durham: {
     city: "Durham",
